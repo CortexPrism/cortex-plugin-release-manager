@@ -1,0 +1,30 @@
+{
+  "name": "cortex-plugin-release-manager",
+  "version": "1.0.0",
+  "description": "Release Manager Agent — Semantic version bump, changelog generation, registry publishing, GitHub Release, Slack announce",
+  "kind": "esm",
+  "entryPoint": "mod.ts",
+  "runtime": "deno",
+  "author": "CortexPrism",
+  "license": "MIT",
+  "repository": "https://github.com/CortexPrism/cortex-plugin-release-manager",
+  "homepage": "https://cortexprism.io/marketplace/plugins/release-manager",
+  "capabilities": ["tools", "network:fetch"],
+  "tools": [
+    {
+      "name": "release_determine_version",
+      "description": "Determine semver bump from commits",
+      "params": []
+    },
+    {
+      "name": "release_generate_changelog",
+      "description": "Generate categorized changelog",
+      "params": []
+    },
+    { "name": "release_publish", "description": "Publish packages to registries", "params": [] },
+    { "name": "release_announce", "description": "Announce release in Slack/Discord", "params": [] }
+  ],
+  "dependencies": {},
+  "peerDependencies": { "cortex": ">=1.0.0" },
+  "aiDisclosure": { "tools": ["Kilo (DeepSeek) — batch scaffold"], "humanReview": true }
+}
